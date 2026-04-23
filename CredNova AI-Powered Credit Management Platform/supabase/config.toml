@@ -1,0 +1,7 @@
+project_id = "qbarwbabslicogcwpibe"
+
+[functions.credit-analysis]
+verify_jwt = false
+
+[functions.chat-assistant]
+verify_jwt = false

@@ -1,0 +1,105 @@
+/* Print-specific styles for CredNova reports */
+@media print {
+  /* Hide navigation and non-essential elements */
+  .app-layout-sidebar,
+  .app-layout-header,
+  button,
+  .no-print {
+    display: none !important;
+  }
+
+  /* Ensure full width for print */
+  .app-layout {
+    padding: 0 !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+  }
+
+  /* Ensure cards and content are visible */
+  .card {
+    border: 1px solid #ccc !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 1rem;
+  }
+
+  /* Ensure text is readable */
+  .text-muted-foreground {
+    color: #666 !important;
+  }
+
+  /* Score colors in print */
+  .text-cam-success {
+    color: #000 !important;
+    font-weight: bold;
+  }
+
+  .text-cam-warning {
+    color: #666 !important;
+    font-weight: bold;
+  }
+
+  .text-cam-danger {
+    color: #333 !important;
+    font-weight: bold;
+  }
+
+  /* Ensure charts are visible */
+  .recharts-wrapper {
+    background: white !important;
+  }
+
+  /* Page breaks */
+  .page-break {
+    page-break-before: always;
+  }
+
+  /* Ensure proper spacing */
+  .space-y-6 > * + * {
+    margin-top: 1.5rem;
+  }
+
+  /* Print-friendly status banner */
+  .bg-cam-success,
+  .bg-cam-warning,
+  .bg-cam-danger {
+    background: white !important;
+    border: 2px solid #ccc !important;
+    color: black !important;
+  }
+
+  /* Ensure tables are readable */
+  .table {
+    font-size: 10pt;
+  }
+
+  .table th,
+  .table td {
+    border: 1px solid #ccc !important;
+    padding: 4px !important;
+  }
+
+  /* Company name and details */
+  h1 {
+    font-size: 18pt;
+    margin-bottom: 0.5rem;
+  }
+
+  /* KPI cards */
+  .grid {
+    gap: 1rem;
+  }
+
+  .text-2xl {
+    font-size: 16pt;
+  }
+
+  /* Ensure content fits on page */
+  .max-w-3xl {
+    max-width: 100% !important;
+  }
+}
